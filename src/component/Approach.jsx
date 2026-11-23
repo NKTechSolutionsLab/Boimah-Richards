@@ -1,157 +1,166 @@
 
 import {
-  Ear,
-  Target,
-  Users,
-  RefreshCw,
+  BriefcaseBusiness,
+  Building2,
   ArrowUpRight,
+  MapPin,
 } from "lucide-react";
 
-const principles = [
+const professionalFocus = [
   {
     number: "01",
-    title: "Listen & Understand",
+    title: "Enterprise Career Opportunities",
     description:
-      "Start by understanding business priorities, stakeholder expectations and the challenges affecting day-to-day operations.",
-    icon: Ear,
+      "Available for full-time and contract opportunities in business systems, supply chain operations, and data analytics.",
+    details: [
+      "Remote opportunities nationwide",
+      "Hybrid and regional onsite roles across Metro Atlanta",
+    ],
+    icon: BriefcaseBusiness,
   },
   {
     number: "02",
-    title: "Align Strategy",
+    title: "Consulting Engagements",
     description:
-      "Connect business objectives with technology requirements and operational realities to establish a clear direction.",
-    icon: Target,
-  },
-  {
-    number: "03",
-    title: "Collaborate",
-    description:
-      "Work across teams and stakeholders, bringing business and technical perspectives together to develop practical solutions.",
-    icon: Users,
-  },
-  {
-    number: "04",
-    title: "Adapt & Improve",
-    description:
-      "Remain adaptable as requirements evolve, using feedback and continuous improvement to strengthen outcomes.",
-    icon: RefreshCw,
+      "Through Richards Digital Consultancy Enterprises, LLC, providing advisory support across business operations and technology-driven initiatives.",
+    details: [
+      "AI workflow evaluation and operational improvement",
+      "Federal and commercial procurement analytics",
+    ],
+    icon: Building2,
   },
 ];
 
 const Approach = () => {
   return (
     <section
-      id="approach"
+      id="about"
       className="bg-[#F5F8FA] py-24 text-[#071724] md:py-32"
     >
       <div className="mx-auto max-w-[1440px] px-6 md:px-10 lg:px-14">
 
-        {/* Header */}
-        <div className="grid gap-8 lg:grid-cols-2 lg:items-end">
+        {/* Section Header */}
+        <div className="grid gap-10 lg:grid-cols-2 lg:items-end">
 
           <div>
             <div className="mb-5 flex items-center gap-3">
               <span className="h-[2px] w-9 bg-[#168E91]" />
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#168E91]">
-                Working Philosophy
+
+              <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#168E91]">
+                Professional Profile
               </span>
             </div>
 
-            <h2 className="max-w-[650px] text-3xl font-semibold leading-tight tracking-tight sm:text-4xl md:text-5xl">
-              The right solutions begin with{" "}
+            <h2 className="max-w-[680px] text-3xl font-semibold leading-tight tracking-tight sm:text-4xl md:text-5xl">
+              Bridging business systems,
+              supply chain and{" "}
               <span className="text-[#168E91]">
-                understanding.
+                data analytics.
               </span>
             </h2>
           </div>
 
-          <p className="max-w-[520px] text-base leading-8 text-slate-600 lg:ml-auto">
-            Every organization has its own priorities, people and
-            operational challenges. A collaborative and adaptable
-            approach helps connect those realities with practical
-            business and technology solutions.
-          </p>
-
-        </div>
-
-        {/* Principles */}
-        <div className="relative mt-16">
-
-          {/* Connecting line */}
-          <div className="absolute left-0 right-0 top-7 hidden h-px bg-slate-200 lg:block" />
-
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-
-            {principles.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <article
-                  key={item.number}
-                  className="group relative"
-                >
-
-                  {/* Number and Icon */}
-                  <div className="relative z-10 mb-8 flex items-center justify-between">
-
-                    <span className="flex h-14 w-14 items-center justify-center border border-slate-200 bg-[#F5F8FA] text-[#168E91] transition-all duration-300 group-hover:border-[#42D5D0] group-hover:bg-[#E5F7F6]">
-                      <Icon size={23} strokeWidth={1.6} />
-                    </span>
-
-                    <span className="text-xs font-semibold tracking-widest text-slate-400">
-                      {item.number}
-                    </span>
-
-                  </div>
-
-                  {/* Content */}
-                  <h3 className="text-xl font-semibold tracking-tight text-[#071724]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-4 text-sm leading-7 text-slate-600">
-                    {item.description}
-                  </p>
-
-                  {/* Accent */}
-                  <div className="mt-7 h-[2px] w-9 bg-[#42D5D0] transition-all duration-300 group-hover:w-16" />
-
-                </article>
-              );
-            })}
-
-          </div>
-
-        </div>
-
-        {/* Closing Message */}
-        <div className="mt-20 grid gap-8 border-t border-slate-200 pt-10 md:grid-cols-2 md:items-center">
-
-          <div>
-            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#168E91]">
-              Business Meets Technology
-            </span>
-
-            <h3 className="mt-3 max-w-xl text-2xl font-semibold leading-snug text-[#071724] sm:text-3xl">
-              Bringing people, processes and technology into alignment.
-            </h3>
-          </div>
-
-          <div className="md:ml-auto">
-            <p className="max-w-md text-sm leading-7 text-slate-600">
-              Combining active listening, adaptability and
-              cross-functional collaboration to address business
-              and operational challenges.
+          <div className="lg:ml-auto">
+            <p className="max-w-[560px] text-base leading-8 text-slate-700 sm:text-lg">
+              Boimah Richards is a business systems, supply chain,
+              and data analytics professional focused on improving
+              business processes through technology, operational
+              insight, and data-driven decision-making.
             </p>
 
-            <a
-              href="#contact"
-              className="mt-6 inline-flex items-center gap-3 text-sm font-semibold text-[#168E91] transition-colors hover:text-[#071724]"
-            >
-              Start a Conversation
-              <ArrowUpRight size={17} />
-            </a>
+            <p className="mt-5 max-w-[560px] text-base leading-8 text-slate-700 sm:text-lg">
+              His professional work spans healthcare supply chain
+              operations, federal and commercial procurement analytics,
+              and AI-assisted workflow evaluation through Richards
+              Digital Consultancy Enterprises, LLC.
+            </p>
           </div>
+
+        </div>
+
+        {/* Professional Focus */}
+        <div className="mt-16 grid gap-6 lg:grid-cols-2">
+
+          {professionalFocus.map((item) => {
+            const Icon = item.icon;
+
+            return (
+              <article
+                key={item.number}
+                className="group border border-slate-200 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#42D5D0] hover:shadow-xl hover:shadow-[#071724]/5 sm:p-9"
+              >
+
+                {/* Card Header */}
+                <div className="mb-8 flex items-center justify-between">
+
+                  <span className="text-base font-semibold tracking-[0.15em] text-[#168E91]">
+                    {item.number}
+                  </span>
+
+                  <div className="flex h-12 w-12 items-center justify-center border border-slate-200 bg-[#F5F8FA] text-[#168E91] transition-all duration-300 group-hover:border-[#42D5D0] group-hover:bg-[#E5F7F6]">
+                    <Icon size={25} strokeWidth={1.7} />
+                  </div>
+
+                </div>
+
+                {/* Card Content */}
+                <h3 className="text-xl font-semibold leading-snug text-[#071724] sm:text-2xl">
+                  {item.title}
+                </h3>
+
+                <p className="mt-5 text-base leading-8 text-slate-700 sm:text-lg">
+                  {item.description}
+                </p>
+
+                {/* Details */}
+                <div className="mt-8 space-y-5 border-t border-slate-200 pt-7">
+
+                  {item.details.map((detail) => (
+                    <div
+                      key={detail}
+                      className="flex items-start gap-3"
+                    >
+                      <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-[#168E91]" />
+
+                      <p className="text-base leading-7 text-slate-700 sm:text-lg">
+                        {detail}
+                      </p>
+                    </div>
+                  ))}
+
+                </div>
+
+                {/* Bottom Accent */}
+                <div className="mt-8 h-[2px] w-9 bg-[#42D5D0] transition-all duration-300 group-hover:w-16" />
+
+              </article>
+            );
+          })}
+
+        </div>
+
+        {/* Closing Section */}
+        <div className="mt-16 flex flex-col gap-6 border-t border-slate-200 pt-9 sm:flex-row sm:items-center sm:justify-between">
+
+          <div>
+            <div className="flex items-center gap-3 text-base font-semibold text-[#168E91]">
+              <MapPin size={20} />
+              Lawrenceville, Georgia
+            </div>
+
+            <p className="mt-3 text-base leading-8 text-slate-700 sm:text-lg">
+              Serving opportunities across Metro Atlanta and nationwide
+              through remote engagements.
+            </p>
+          </div>
+
+          <a
+            href="#contact"
+            className="inline-flex w-fit shrink-0 items-center gap-3 text-base font-semibold text-[#168E91] transition-colors hover:text-[#071724]"
+          >
+            Get in Touch
+            <ArrowUpRight size={20} />
+          </a>
 
         </div>
 

@@ -11,38 +11,38 @@ import {
 const expertiseAreas = [
   {
     number: "01",
-    title: "Supply Chain & Operations",
+    title: "Supply Chain & Source-to-Pay Optimization",
     description:
-      "Improving inventory management, shipment coordination, supplier performance and operational workflows across complex distribution environments.",
+      "Optimizing supply chain and source-to-pay processes through improved procurement workflows, supplier evaluation, inventory management, and operational coordination.",
     icon: Truck,
   },
   {
     number: "02",
-    title: "Business Systems Analysis",
+    title: "Business Intelligence & Data Analytics",
     description:
-      "Bridging business requirements and technical execution through process documentation, system integration, validation and cross-functional collaboration.",
-    icon: Network,
-  },
-  {
-    number: "03",
-    title: "Data & Business Intelligence",
-    description:
-      "Using SQL, Python and data analytics to examine complex datasets, identify operational patterns and support informed business decisions.",
+      "Transforming complex business data into actionable insights using SQL, Python, Pandas, NumPy, Power BI, and Advanced Excel/VBA. Building automated KPI dashboards and reporting solutions to support better decision-making.",
     icon: BarChart3,
   },
   {
-    number: "04",
-    title: "Process Optimization",
+    number: "03",
+    title: "AI Model Evaluation & Workflow Automation",
     description:
-      "Identifying workflow inefficiencies and applying Lean, Kaizen and Agile methodologies to improve operational performance.",
+      "Evaluating AI models, applying prompt engineering, and testing operational workflows to improve output quality, consistency, and the practical application of AI in business processes.",
+    icon: BrainCircuit,
+  },
+  {
+    number: "04",
+    title: "Government & Commercial Procurement",
+    description:
+      "Supporting procurement operations through DLA/DIBBS sourcing, National Stock Number (NSN) logistics, supplier evaluation, quote preparation, and federal bid-readiness processes.",
     icon: Workflow,
   },
   {
     number: "05",
-    title: "AI Strategy & Workflow Automation",
+    title: "Agile Product Ownership & Business Systems Analysis",
     description:
-      "Exploring practical enterprise AI applications through model evaluation, prompt engineering, fine-tuning and workflow automation.",
-    icon: BrainCircuit,
+      "Bridging business and technology through requirements analysis, user stories, User Acceptance Testing (UAT), systems integration, and Agile product ownership.",
+    icon: Network,
   },
 ];
 
@@ -61,22 +61,22 @@ const Expertise = () => {
             <div className="mb-5 flex items-center gap-3">
               <span className="h-[2px] w-9 bg-[#42D5D0]" />
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#42D5D0]">
-                Core Expertise
+                Consulting & Core Services
               </span>
             </div>
 
             <h2 className="max-w-[650px] text-3xl font-semibold leading-tight tracking-tight sm:text-4xl md:text-5xl">
-              Connecting strategy, technology and{" "}
+              Connecting business operations with{" "}
               <span className="text-[#42D5D0]">
-                operational performance.
+                technology and analytics.
               </span>
             </h2>
           </div>
 
           <p className="max-w-[520px] text-base leading-8 text-slate-400 lg:ml-auto">
-            A multidisciplinary approach to solving business challenges,
-            connecting operational knowledge with technology, analytics
-            and continuous improvement.
+            Combining supply chain expertise, business systems analysis,
+            data intelligence, and applied AI to address operational
+            challenges and support enterprise improvement.
           </p>
 
         </div>
@@ -90,7 +90,7 @@ const Expertise = () => {
             return (
               <article
                 key={item.number}
-                className="group relative flex min-h-[290px] flex-col border border-white/10 bg-[#102B3B]/50 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#42D5D0]/50 hover:bg-[#102B3B] md:p-8"
+                className="group relative flex min-h-[310px] flex-col border border-white/10 bg-[#102B3B]/50 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#42D5D0]/50 hover:bg-[#102B3B] md:p-8"
               >
 
                 {/* Top Row */}
@@ -105,7 +105,7 @@ const Expertise = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="max-w-[300px] text-xl font-semibold leading-snug text-white">
+                <h3 className="max-w-[320px] text-xl font-semibold leading-snug text-white">
                   {item.title}
                 </h3>
 
@@ -116,7 +116,7 @@ const Expertise = () => {
                 {/* Bottom Accent */}
                 <div className="mt-7 flex items-center justify-between border-t border-white/10 pt-5">
                   <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">
-                    Area of Expertise
+                    Core Capability
                   </span>
 
                   <ArrowUpRight
@@ -135,15 +135,15 @@ const Expertise = () => {
         <div className="mt-14 flex flex-col gap-5 border-t border-white/10 pt-9 sm:flex-row sm:items-center sm:justify-between">
 
           <p className="max-w-xl text-sm leading-7 text-slate-400">
-            Have a business challenge involving operations, technology
-            or data? Let's explore where meaningful improvements can begin.
+            Explore how business systems, data analytics, procurement,
+            and operational expertise can support your organization's goals.
           </p>
 
           <a
             href="#contact"
             className="inline-flex w-fit shrink-0 items-center gap-3 text-sm font-semibold text-[#42D5D0] transition-colors hover:text-white"
           >
-            Discuss a Business Challenge
+            Discuss Consulting Opportunities
             <ArrowUpRight size={17} />
           </a>
 

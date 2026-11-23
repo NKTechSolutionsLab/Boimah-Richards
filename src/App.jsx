@@ -10,6 +10,7 @@ import Expertise from './component/Expertise'
 import OperationalInsight from './component/OperationalInsight'
 import Experience from './component/Experience'
 import Approach from './component/Approach'
+import AppliedProjects from './component/AppliedProjects'
 import EducationCredentials from './component/EducationCredentials'
 import ContactCTA from './component/ContactCTA'
 import Footer from './component/Footer'
@@ -26,6 +27,7 @@ function App() {
     <OperationalInsight />
     <Experience />
     <Approach />
+    <AppliedProjects />
     <EducationCredentials />
     <ContactCTA />
     <Footer />

@@ -1,225 +1,200 @@
 
 import {
-  Search,
-  ChartNoAxesCombined,
+  Truck,
   Workflow,
-  Target,
+  BrainCircuit,
   ArrowUpRight,
 } from "lucide-react";
 
-const processSteps = [
+const caseStudies = [
   {
     number: "01",
-    title: "Observe",
-    description:
-      "Understand existing operations, workflows, systems and stakeholder requirements.",
-    icon: Search,
+    category: "Healthcare Supply Chain",
+    title: "Clinical Inventory Optimization",
+    organization: "Cardinal Health",
+    period: "2022–2026",
+    icon: Truck,
+    challenge:
+      "High-volume medical supply distribution across hospital networks in Georgia and the Southeast required better visibility into stock levels, vendor lead times, and priority clinical shipments to prevent stockouts and delivery delays.",
+    action:
+      "Developed multi-system SQL queries, Warehouse Management System (WMS) tracking reports, and automated Excel/VBA analytics dashboards. Collaborated with IT, clinical, and logistics teams to standardize exception-handling workflows.",
+    impact:
+      "Improved on-time clinical delivery reliability, accelerated bottleneck identification through automated exception reporting, and strengthened cross-functional inventory control.",
   },
   {
     number: "02",
-    title: "Analyze",
-    description:
-      "Examine operational data, identify bottlenecks and uncover process inefficiencies.",
-    icon: ChartNoAxesCombined,
+    category: "Federal Procurement Analytics",
+    title: "Procurement & Bid Readiness Workflow",
+    organization: "DLA / Vivian Contracting",
+    period: "2026",
+    icon: Workflow,
+    challenge:
+      "Responding to Defense Logistics Agency (DLA) and DIBBS solicitations required rapid supplier vetting, National Stock Number (NSN) cross-referencing, margin and cost modelling, and regulatory compliance under tight submission deadlines.",
+    action:
+      "Designed a structured procurement evaluation and quote-preparation framework, standardizing supplier comparison matrices, compliance checklists, and pre-submission peer-review workflows across federal solicitations, including SPE7L1-26-U-0535.",
+    impact:
+      "Streamlined end-to-end bid turnaround, established 100% compliance verification prior to federal submission, and developed a repeatable sourcing playbook for government contract opportunities.",
   },
   {
     number: "03",
-    title: "Improve",
-    description:
-      "Translate findings into structured solutions using process improvement and technology.",
-    icon: Workflow,
-  },
-  {
-    number: "04",
-    title: "Measure",
-    description:
-      "Evaluate improvements against operational objectives and business requirements.",
-    icon: Target,
+    category: "Enterprise AI & Automation",
+    title: "AI Workflow Evaluation & Process Automation",
+    organization: "Richards Digital Consultancy Enterprises, LLC",
+    period: "2024–Present",
+    icon: BrainCircuit,
+    challenge:
+      "Organizations adopting AI-assisted data and operational workflows needed rigorous quality controls, structured prompt engineering, and business-rule validation to ensure outputs were accurate and auditable.",
+
+    action:
+      "Led model evaluation, prompt engineering, and structured workflow testing across complex business and operational datasets, translating stakeholder requirements into clear acceptance criteria and automated reporting templates.",
+
+    impact:
+      "Reduced manual review cycles, improved output consistency across analytical tasks, and established repeatable governance standards for AI-assisted business operations.",
   },
 ];
 
 const OperationalInsight = () => {
   return (
     <section
-      id="about"
+      id="case-studies"
       className="overflow-hidden bg-[#F5F8FA] py-24 text-[#071724] md:py-32"
     >
       <div className="mx-auto max-w-[1440px] px-6 md:px-10 lg:px-14">
 
         {/* Section Header */}
-        <div className="mb-16 max-w-3xl">
-          <div className="mb-5 flex items-center gap-3">
-            <span className="h-[2px] w-9 bg-[#168E91]" />
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#168E91]">
-              A Practical Approach
-            </span>
-          </div>
-
-          <h2 className="text-3xl font-semibold leading-tight tracking-tight sm:text-4xl md:text-5xl">
-            Turning complex challenges into{" "}
-            <span className="text-[#168E91]">
-              structured solutions.
-            </span>
-          </h2>
-
-          <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600">
-            Effective improvement starts with understanding how a business
-            operates. By connecting process knowledge, systems and data,
-            opportunities for meaningful change become clearer.
-          </p>
-        </div>
-
-        {/* Main Content */}
-        <div className="grid items-stretch gap-12 lg:grid-cols-2 lg:gap-16">
-
-          {/* Left: Visual */}
-          <div className="relative min-h-[430px] overflow-hidden bg-[#102B3B]">
-
-            <img
-              src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=1200&q=85"
-              alt="Organized supply chain warehouse operations"
-              className="absolute inset-0 h-full w-full object-cover opacity-65"
-            />
-
-            <div className="absolute inset-0 bg-gradient-to-t from-[#071724] via-[#071724]/35 to-transparent" />
-
-            <div className="absolute left-7 top-7 sm:left-9 sm:top-9">
-              <span className="border border-white/30 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white">
-                Operational Perspective
-              </span>
-            </div>
-
-            <div className="absolute bottom-8 left-7 right-7 sm:bottom-10 sm:left-9 sm:right-9">
-
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#42D5D0]">
-                From Identification to Improvement
-              </span>
-
-              <h3 className="mt-4 max-w-lg text-3xl font-semibold leading-tight text-white sm:text-4xl">
-                Better visibility leads to better decisions.
-              </h3>
-
-              <p className="mt-4 max-w-md text-sm leading-7 text-slate-300">
-                Bringing together operational understanding, analytical
-                thinking and technology-driven execution.
-              </p>
-
-            </div>
-          </div>
-
-          {/* Right: Process */}
-          <div className="flex flex-col justify-center">
-
-            <div className="mb-9">
-              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#168E91]">
-                The Improvement Cycle
-              </span>
-
-              <h3 className="mt-3 text-2xl font-semibold tracking-tight text-[#071724] sm:text-3xl">
-                A clear path from insight to action.
-              </h3>
-            </div>
-
-            <div className="relative space-y-8">
-
-              {/* Vertical Timeline */}
-              <div className="absolute bottom-8 left-[21px] top-5 w-px bg-slate-200" />
-
-              {processSteps.map((step) => {
-                const Icon = step.icon;
-
-                return (
-                  <div
-                    key={step.number}
-                    className="group relative flex gap-5"
-                  >
-
-                    {/* Icon */}
-                    <div className="relative z-10 flex h-[44px] w-[44px] shrink-0 items-center justify-center border border-slate-200 bg-white text-[#168E91] transition-all duration-300 group-hover:border-[#42D5D0] group-hover:bg-[#E4F8F7]">
-                      <Icon size={20} strokeWidth={1.7} />
-                    </div>
-
-                    {/* Content */}
-                    <div className="flex-1 border-b border-slate-200 pb-7">
-                      <div className="mb-2 flex items-center gap-3">
-                        <span className="text-[10px] font-semibold tracking-widest text-[#168E91]">
-                          {step.number}
-                        </span>
-
-                        <h4 className="text-lg font-semibold text-[#071724]">
-                          {step.title}
-                        </h4>
-                      </div>
-
-                      <p className="max-w-md text-sm leading-7 text-slate-600">
-                        {step.description}
-                      </p>
-                    </div>
-
-                  </div>
-                );
-              })}
-
-            </div>
-
-          </div>
-        </div>
-
-        {/* Achievement Strip */}
-        <div className="mt-20 grid gap-8 border-t border-slate-200 pt-10 md:grid-cols-[1fr_auto] md:items-center">
+        <div className="mb-16 grid gap-8 lg:grid-cols-2 lg:items-end">
 
           <div>
-            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#168E91]">
-              Practical Application
+            <div className="mb-5 flex items-center gap-3">
+              <span className="h-[2px] w-9 bg-[#168E91]" />
+
+              <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#168E91]">
+                Selected Case Studies
+              </span>
+            </div>
+
+            <h2 className="max-w-[680px] text-3xl font-semibold leading-tight tracking-tight sm:text-4xl md:text-5xl">
+              Applying expertise to{" "}
+              <span className="text-[#168E91]">
+                real business challenges.
+              </span>
+            </h2>
+          </div>
+
+          <p className="max-w-[520px] text-base leading-8 text-slate-600 lg:ml-auto">
+            Selected work across healthcare supply chains, federal
+            procurement, and enterprise AI workflows, demonstrating
+            how analytical thinking and practical execution address
+            complex operational requirements.
+          </p>
+
+        </div>
+
+        {/* Case Studies */}
+        <div className="grid gap-6 lg:grid-cols-3">
+
+          {caseStudies.map((study) => {
+            const Icon = study.icon;
+
+            return (
+              <article
+                key={study.number}
+                className="group flex h-full flex-col border border-slate-200 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#168E91]/40 hover:shadow-xl hover:shadow-[#071724]/5 md:p-8"
+              >
+
+                {/* Card Header */}
+                <div className="mb-7 flex items-start justify-between">
+
+                  <div>
+                    <span className="text-sm font-semibold tracking-[0.15em] text-[#168E91]">
+                      CASE STUDY {study.number}
+                    </span>
+
+                    <p className="mt-3 text-[13px] font-semibold uppercase leading-5 tracking-[0.1em] text-slate-500">
+                      {study.category}
+                    </p>
+                  </div>
+
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center border border-slate-200 bg-[#F5F8FA] text-[#168E91] transition-all duration-300 group-hover:border-[#42D5D0] group-hover:bg-[#E4F8F7]">
+                    <Icon size={23} strokeWidth={1.7} />
+                  </div>
+
+                </div>
+
+                {/* Title */}
+                <h3 className="text-[21px] font-semibold leading-snug text-[#071724] sm:text-[22px]">
+                  {study.title}
+                </h3>
+
+                {/* Organization */}
+                <div className="mt-4 flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 pb-5">
+                  <span className="text-[15px] font-semibold leading-6 text-[#168E91]">
+                    {study.organization}
+                  </span>
+
+                  <span className="text-sm font-medium text-slate-600">
+                    {study.period}
+                  </span>
+                </div>
+
+                {/* Challenge */}
+                <div className="mt-7">
+                  <h4 className="text-[13px] font-bold uppercase tracking-[0.14em] text-[#168E91]">
+                    The Challenge
+                  </h4>
+
+                  <p className="mt-3 text-[15px] leading-[1.8] text-slate-700">
+                    {study.challenge}
+                  </p>
+                </div>
+
+                {/* Approach */}
+                <div className="mt-7">
+                  <h4 className="text-[13px] font-bold uppercase tracking-[0.14em] text-[#168E91]">
+                    The Approach
+                  </h4>
+
+                  <p className="mt-3 text-[15px] leading-[1.8] text-slate-700">
+                    {study.action}
+                  </p>
+                </div>
+
+                {/* Impact */}
+                <div className="mt-auto pt-8">
+                  <div className="border-l-[3px] border-[#42D5D0] bg-[#F5F8FA] p-5">
+                    <h4 className="text-[13px] font-bold uppercase tracking-[0.14em] text-[#168E91]">
+                      The Impact
+                    </h4>
+
+                    <p className="mt-3 text-[15px] leading-[1.8] text-[#102B3B]">
+                      {study.impact}
+                    </p>
+                  </div>
+                </div>
+
+              </article>
+            );
+          })}
+
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="mt-16 flex flex-col gap-5 border-t border-slate-200 pt-9 sm:flex-row sm:items-center sm:justify-between">
+
+          <div>
+            <span className="text-sm font-semibold uppercase tracking-[0.15em] text-[#168E91]">
+              Professional Background
             </span>
 
-            <h3 className="mt-3 max-w-2xl text-2xl font-semibold leading-snug text-[#071724] sm:text-3xl">
-              Identifying inefficiencies.
-              <br />
-              Developing actionable solutions.
-            </h3>
-
-            <p className="mt-4 max-w-xl text-sm leading-7 text-slate-600">
-              In his supply chain work, Boimah identified 18–20 process
-              inefficiencies and translated the findings into 7 strategic
-              solutions focused on workflow performance and cost efficiency.
+            <p className="mt-3 max-w-xl text-[15px] leading-7 text-slate-600">
+              Explore the professional experience and technical background
+              behind these projects.
             </p>
           </div>
 
-          <div className="flex items-center gap-5 border-l-2 border-[#42D5D0] pl-6 md:min-w-[190px]">
-
-            <div>
-              <span className="block text-4xl font-semibold tracking-tight text-[#071724]">
-                18–20
-              </span>
-
-              <span className="mt-2 block text-xs leading-5 text-slate-500">
-                Process inefficiencies identified
-              </span>
-
-              <span className="mt-5 block text-4xl font-semibold tracking-tight text-[#168E91]">
-                7
-              </span>
-
-              <span className="mt-2 block text-xs leading-5 text-slate-500">
-                Strategic solutions developed
-              </span>
-            </div>
-
-          </div>
-
-        </div>
-
-        {/* CTA */}
-        <div className="mt-12 flex flex-wrap items-center justify-between gap-5">
-
-          <p className="text-sm text-slate-500">
-            Explore the professional experience behind this approach.
-          </p>
-
           <a
             href="#experience"
-            className="inline-flex items-center gap-3 text-sm font-semibold text-[#168E91] transition-colors hover:text-[#071724]"
+            className="inline-flex w-fit shrink-0 items-center gap-3 text-[15px] font-semibold text-[#168E91] transition-colors hover:text-[#071724]"
           >
             Explore Experience
             <ArrowUpRight size={18} />
@@ -233,4 +208,3 @@ const OperationalInsight = () => {
 };
 
 export default OperationalInsight;
-    

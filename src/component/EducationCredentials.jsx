@@ -5,22 +5,39 @@ import {
   ArrowUpRight,
   BookOpen,
   BadgeCheck,
+  ShieldCheck,
 } from "lucide-react";
 
 const education = [
   {
-    degree: "MBA in Information Technology Management",
+    degree: "Doctor of Business Administration (DBA)",
+    specialization: "Business Analytics & Operations Research",
+    institution: "Liberty University",
+    status: "Doctoral Candidate · In Progress · 2026",
+    icon: GraduationCap,
+    highlight: true,
+  },
+  {
+    degree: "Master of Business Administration (MBA)",
+    specialization: "Information Technology Management",
     institution: "Southern New Hampshire University",
-    period: "June 2025 — September 2026",
-    result: "Grade A",
+    detail: "Concentration: Supply Chain & IT Management",
+    status: "Completed · GPA 3.9",
+    icon: BookOpen,
+  },
+  {
+    degree: "Master of Science (M.S.)",
+    specialization: "Management Information Systems",
+    institution: null,
+    status: "Completed",
     icon: GraduationCap,
   },
   {
-    degree: "MBA in Operations & Supply Chain Management",
-    institution: "Southern New Hampshire University",
-    period: "May 2025 — September 2026",
-    result: "GPA 4.0",
-    icon: BookOpen,
+    degree: "Bachelor of Science (B.S.)",
+    specialization: "Management Information Systems",
+    institution: "National American University · Sioux Falls, SD",
+    status: "Completed",
+    icon: GraduationCap,
   },
 ];
 
@@ -28,12 +45,12 @@ const certifications = [
   {
     name: "Certified ScrumMaster",
     abbreviation: "CSM",
-    description: "Agile Project Delivery",
+    issuer: "Scrum Alliance",
   },
   {
     name: "Certified Scrum Product Owner",
     abbreviation: "CSPO",
-    description: "Product Ownership & Management",
+    issuer: "Scrum Alliance",
   },
 ];
 
@@ -52,42 +69,42 @@ const EducationCredentials = () => {
             <div className="mb-5 flex items-center gap-3">
               <span className="h-[2px] w-9 bg-[#42D5D0]" />
 
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#42D5D0]">
+              <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#42D5D0]">
                 Education & Credentials
               </span>
             </div>
 
             <h2 className="max-w-[650px] text-3xl font-semibold leading-tight tracking-tight sm:text-4xl md:text-5xl">
-              Built on knowledge.
+              Academic knowledge.
               <br />
               <span className="text-[#42D5D0]">
-                Strengthened through practice.
+                Professional development.
               </span>
             </h2>
           </div>
 
-          <p className="max-w-[500px] text-base leading-8 text-slate-400 lg:ml-auto">
-            Academic preparation in information technology and
-            supply chain management, complemented by professional
-            credentials in Agile project delivery.
+          <p className="max-w-[520px] text-base leading-8 text-slate-300 lg:ml-auto">
+            A multidisciplinary academic background spanning information
+            systems, technology management, business analytics, and
+            operations, complemented by professional Agile certifications.
           </p>
 
         </div>
 
         {/* Main Grid */}
-        <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
+        <div className="grid gap-12 lg:grid-cols-[1.3fr_0.7fr] lg:gap-16">
 
           {/* Education */}
           <div>
-            <div className="mb-7 flex items-center gap-3">
-              <GraduationCap size={21} className="text-[#42D5D0]" />
+            <div className="mb-8 flex items-center gap-3">
+              <GraduationCap size={25} className="text-[#42D5D0]" />
 
-              <h3 className="text-lg font-semibold text-white">
+              <h3 className="text-xl font-semibold text-white sm:text-2xl">
                 Academic Background
               </h3>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-5">
 
               {education.map((item, index) => {
                 const Icon = item.icon;
@@ -95,40 +112,62 @@ const EducationCredentials = () => {
                 return (
                   <article
                     key={item.degree}
-                    className="border border-white/10 bg-[#102B3B]/70 p-6 transition-colors duration-300 hover:border-[#42D5D0]/40 sm:p-8"
+                    className={`border p-6 transition-all duration-300 sm:p-8 ${
+                      item.highlight
+                        ? "border-[#42D5D0]/40 bg-[#102B3B]"
+                        : "border-white/10 bg-[#102B3B]/60 hover:border-[#42D5D0]/40"
+                    }`}
                   >
 
                     <div className="flex items-start gap-5">
 
                       <div className="flex h-12 w-12 shrink-0 items-center justify-center border border-[#42D5D0]/30 bg-[#42D5D0]/10 text-[#42D5D0]">
-                        <Icon size={23} strokeWidth={1.6} />
+                        <Icon size={24} strokeWidth={1.6} />
                       </div>
 
                       <div className="min-w-0 flex-1">
 
-                        <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#42D5D0]">
-                          Postgraduate Qualification 0{index + 1}
-                        </span>
+                        <div className="flex flex-wrap items-center gap-3">
+                          <span className="text-sm font-semibold uppercase tracking-[0.12em] text-[#42D5D0]">
+                            Qualification 0{index + 1}
+                          </span>
 
-                        <h4 className="mt-3 text-lg font-semibold leading-snug text-white sm:text-xl">
+                          {item.highlight && (
+                            <span className="border border-[#42D5D0]/30 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#42D5D0]">
+                              In Progress
+                            </span>
+                          )}
+                        </div>
+
+                        <h4 className="mt-4 text-xl font-semibold leading-snug text-white sm:text-2xl">
                           {item.degree}
                         </h4>
 
-                        <p className="mt-3 text-sm text-slate-300">
-                          {item.institution}
+                        <p className="mt-3 text-base leading-7 text-slate-200 sm:text-lg">
+                          {item.specialization}
                         </p>
 
-                        <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-white/10 pt-4">
+                        {item.institution && (
+                          <p className="mt-3 text-base leading-7 text-slate-300">
+                            {item.institution}
+                          </p>
+                        )}
 
-                          <span className="text-xs text-slate-400">
-                            {item.period}
+                        {item.detail && (
+                          <p className="mt-2 text-base leading-7 text-slate-300">
+                            {item.detail}
+                          </p>
+                        )}
+
+                        <div className="mt-5 flex flex-wrap items-center gap-2 border-t border-white/10 pt-5">
+                          <BadgeCheck
+                            size={19}
+                            className="shrink-0 text-[#42D5D0]"
+                          />
+
+                          <span className="text-base font-medium text-slate-200">
+                            {item.status}
                           </span>
-
-                          <span className="flex items-center gap-2 text-xs font-medium text-[#42D5D0]">
-                            <BadgeCheck size={14} />
-                            {item.result}
-                          </span>
-
                         </div>
 
                       </div>
@@ -141,17 +180,19 @@ const EducationCredentials = () => {
             </div>
           </div>
 
-          {/* Certifications */}
+          {/* Certifications & Military Service */}
           <div>
-            <div className="mb-7 flex items-center gap-3">
-              <Award size={21} className="text-[#42D5D0]" />
 
-              <h3 className="text-lg font-semibold text-white">
+            {/* Certifications */}
+            <div className="mb-8 flex items-center gap-3">
+              <Award size={25} className="text-[#42D5D0]" />
+
+              <h3 className="text-xl font-semibold text-white sm:text-2xl">
                 Professional Certifications
               </h3>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-5">
 
               {certifications.map((cert) => (
                 <article
@@ -162,21 +203,21 @@ const EducationCredentials = () => {
                   <div className="flex items-center justify-between gap-4">
 
                     <div>
-                      <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#42D5D0]">
+                      <span className="text-base font-bold uppercase tracking-[0.16em] text-[#42D5D0]">
                         {cert.abbreviation}
                       </span>
 
-                      <h4 className="mt-3 text-lg font-semibold leading-snug text-white">
+                      <h4 className="mt-3 text-lg font-semibold leading-snug text-white sm:text-xl">
                         {cert.name}
                       </h4>
 
-                      <p className="mt-2 text-sm text-slate-400">
-                        {cert.description}
+                      <p className="mt-3 text-base leading-7 text-slate-300">
+                        Issued by {cert.issuer}
                       </p>
                     </div>
 
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#42D5D0]/30 text-[#42D5D0]">
-                      <Award size={22} />
+                      <Award size={24} />
                     </div>
 
                   </div>
@@ -186,13 +227,33 @@ const EducationCredentials = () => {
 
             </div>
 
-            {/* Supporting Note */}
-            <div className="mt-6 border-l-2 border-[#42D5D0] bg-[#102B3B]/40 p-5">
-              <p className="text-sm leading-7 text-slate-400">
-                Combining technology management, supply chain
-                knowledge and Agile practices to support business
-                and operational objectives.
-              </p>
+            {/* Military Service */}
+            <div className="mt-10">
+
+              <div className="mb-6 flex items-center gap-3">
+                <ShieldCheck size={25} className="text-[#42D5D0]" />
+
+                <h3 className="text-xl font-semibold text-white sm:text-2xl">
+                  Military Service
+                </h3>
+              </div>
+
+              <article className="border border-white/10 bg-[#102B3B]/70 p-6 sm:p-7">
+
+                <span className="text-sm font-semibold uppercase tracking-[0.14em] text-[#42D5D0]">
+                  United States Navy Reserve
+                </span>
+
+                <h4 className="mt-4 text-xl font-semibold leading-snug text-white">
+                  U.S. Navy Reserve Veteran
+                </h4>
+
+                <p className="mt-3 text-base leading-7 text-slate-300">
+                  Honorable Discharge
+                </p>
+
+              </article>
+
             </div>
 
           </div>
@@ -200,19 +261,19 @@ const EducationCredentials = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-16 flex flex-col gap-5 border-t border-white/10 pt-9 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-16 flex flex-col gap-6 border-t border-white/10 pt-10 sm:flex-row sm:items-center sm:justify-between">
 
-          <p className="max-w-xl text-sm leading-7 text-slate-400">
-            Explore how academic knowledge and professional
-            experience come together in practical business environments.
+          <p className="max-w-xl text-base leading-8 text-slate-300">
+            Combining academic preparation, professional certifications,
+            and practical experience across business and technology.
           </p>
 
           <a
             href="#contact"
-            className="inline-flex w-fit items-center gap-3 text-sm font-semibold text-[#42D5D0] transition-colors hover:text-white"
+            className="inline-flex w-fit shrink-0 items-center gap-3 text-base font-semibold text-[#42D5D0] transition-colors hover:text-white"
           >
             Connect with Boimah
-            <ArrowUpRight size={17} />
+            <ArrowUpRight size={19} />
           </a>
 
         </div>
